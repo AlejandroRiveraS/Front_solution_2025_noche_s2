@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtro con mensaje dinámico</title>
+  <link rel="stylesheet" href="../assets/styles/HU-FRONT-EST06.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📋 Lista de Usuarios</h1>
+    
+    <!-- Filtro por nombre -->
+    <div class="input-group">
+      <input type="text" id="filtro" placeholder="🔍 Buscar usuario...">
+    </div>
+
+    <!-- Filtros por fechas -->
+    <div class="input-group">
+      <label for="fechaInicio">📅 Fecha inicio:</label>
+      <input type="date" id="fechaInicio">
+    </div>
+
+    <div class="input-group">
+      <label for="fechaFin">📅 Fecha fin:</label>
+      <input type="date" id="fechaFin">
+    </div>
+    
+    <!-- Mensaje de validación de fechas -->
+    <p id="errorFechas" class="mensaje" style="display:none; color:red;">
+      ⚠️ La fecha inicial no puede ser mayor a la final.
+    </p>
+
+    <!-- Lista renderizada -->
+    <ul id="lista" class="lista"></ul>
+    
+    <!-- Mensaje cuando no hay resultados -->
+    <div id="mensaje" class="mensaje">
+      ⚠️ No hay datos que coincidan con el filtro.
+    </div>
+  </div>
+
+  <script src="../controllers/HU - FRONT -EST04.js"></script>
+</body>
+</html>
