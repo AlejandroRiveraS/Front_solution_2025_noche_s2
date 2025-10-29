@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gráfico de Asistencia por Mes</title>
+
+  <!-- Chart.js y plugin DataLabels -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+
+  <!-- CSS interno -->
+  <style>
+    body {
+      font-family: "Poppins", "Inter", sans-serif;
+      background: #f8fafc;
+      margin: 0;
+      padding: 20px;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 500px;              /* 🔹 ancho fijo más pequeño */
+      background: #fff;
+      padding: 16px 22px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    /* 🔹 Gráfica más pequeña */
+    canvas {
+      width: 100% !important;
+      height: 180px !important;   /* antes 420px → ahora muy compacta */
+      display: block;
+      margin: 0 auto;
+    }
+
+    .mensaje {
+      margin-top: 8px;
+      font-size: 13px;
+      color: #475569;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>📊 Asistencia Mensual — HU-FRONT-EST01</h1>
+    <canvas id="graficoAsistencia"></canvas>
+    <div class="mensaje">Datos simulados de asistencia mensual con etiquetas de porcentaje.</div>
+  </div>
+
+  <script src="../controllers/HU-FRONT-EST01.js"></script>
+</body>
+</html>
+

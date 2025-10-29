@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filtro por Rango de Fechas</title>
+
+  <!-- CSS incorporado -->
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f8fafc;
+      margin: 0;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    input[type="date"], button {
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #0284c7;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #0369a1;
+    }
+
+    .mensaje {
+      text-align: center;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #e5e7eb;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f1f5f9;
+    }
+
+    /* Ocultamos elementos marcados */
+    .marcado {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>📆 Filtrar Datos por Rango de Fechas</h1>
+
+    <!-- Campos tipo date -->
+    <div class="input-group">
+      <label for="fechaInicio">Fecha inicial:</label>
+      <input type="date" id="fechaInicio">
+      
+      <label for="fechaFin">Fecha final:</label>
+      <input type="date" id="fechaFin">
+
+      <button id="btnFiltrar">Aplicar filtro</button>
+      <button id="btnLimpiar">Limpiar</button>
+    </div>
+
+    <!-- Mensaje dinámico -->
+    <div id="mensaje" class="mensaje"></div>
+
+    <!-- Elementos "marcados" (deben ocultarse) -->
+    <div class="marcado">Elemento marcado oculto 1</div>
+    <div class="marcado">Elemento marcado oculto 2</div>
+
+    <!-- Datos de ejemplo -->
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Fecha</th>
+          <th>Responsable</th>
+          <th>Resultado</th>
+        </tr>
+      </thead>
+      <tbody id="tablaDatos">
+        <tr><td>1</td><td data-fecha="2025-10-01">2025-10-01</td><td>Ana</td><td>Completo</td></tr>
+        <tr><td>2</td><td data-fecha="2025-10-10">2025-10-10</td><td>Carlos</td><td>Pendiente</td></tr>
+        <tr><td>3</td><td data-fecha="2025-10-20">2025-10-20</td><td>Luisa</td><td>Fallido</td></tr>
+        <tr><td>4</td><td data-fecha="2025-10-25">2025-10-25</td><td>Diego</td><td>Completo</td></tr>
+        <tr><td>5</td><td data-fecha="2025-11-05">2025-11-05</td><td>María</td><td>Pendiente</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Enlace al JS -->
+  <script src="../controllers/HU-FRONT-EST04.js"></script>
+</body>
+</html>
